@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle, #0b456b , #021c37);
+}
+.clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vmin;
+    width: 60vmin;
+    border-radius: 50%;
+    position: absolute;
+    background: radial-gradient(circle, #05263c , #000d1a);
+}
+/* .clock::before{
+    content: "";
+    position: absolute;
+    width: 64vmin;;
+    height: 64vmin;;
+    border-radius: 50%;
+    background:linear-gradient(to right,#00d9ff , #ee00ff);
+    box-shadow : 0 0 15px 13px rgba(0, 0, 0, 0.2);
+    z-index: -1;
+} */
+.clock-border {
+    position: absolute;
+    width: 63vmin;
+    height: 63vmin;
+    border-radius: 50%;
+    background:linear-gradient(to right,#00d9ff , #ee00ff);
+    box-shadow : 0 0 15px 13px rgba(0, 0, 0, 0.2);
+    /* z-index: -1; */
+}
+.number{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--n)));
+    inset: 30px;
+    text-align: center;
+    font-size: 4vmin;
+    color: #00d9ff;
+    text-shadow: 0 0 12px #ee00ff;
+}
+.number b {
+    transform: rotate(calc(-30deg * var(--n)));
+    display : inline-block;
+}
+.dot{
+    height: 3vmin;
+    width: 3vmin;
+    position: absolute;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: #ee00ff;
+    border: 6px solid #00d9ff;
+}
+.hour-hand, .minute-hand , .second-hand{
+    --rotate : 0;
+    position: absolute;
+    left : 50%;
+    bottom: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotate) * 1deg));
+    transform-origin: bottom;
+    border-radius: 3vmin;
+}
+.hour-hand {
+    height: 18vmin;
+    width: 1.5vmin;
+    background: linear-gradient(#00d9ff, #ee00ff);
+}
+.minute-hand {
+    height: 20vmin;
+    width: 1vmin;
+    background: linear-gradient(to top,#00d9ff, #ee00ff);
+}
+.second-hand {
+    height: 22vmin;
+    width: 0.6vmin;
+    background-color: lightcoral;
+    background: linear-gradient(to top,#00d9ff, #ee00ff);
+}
+.digital-time {
+    margin-top: 15vmin;
+    font-size: 5vmin;
+    padding: 5px;
+    border-radius: 2vmin;
+    color: #00d9ff;
+    text-shadow: 0 0 12px #ee00ff;
+}
