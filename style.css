@@ -25,16 +25,6 @@ main {
     position: absolute;
     background: radial-gradient(circle, #05263c , #000d1a);
 }
-/* .clock::before{
-    content: "";
-    position: absolute;
-    width: 64vmin;;
-    height: 64vmin;;
-    border-radius: 50%;
-    background:linear-gradient(to right,#00d9ff , #ee00ff);
-    box-shadow : 0 0 15px 13px rgba(0, 0, 0, 0.2);
-    z-index: -1;
-} */
 .clock-border {
     position: absolute;
     width: 63vmin;
@@ -61,10 +51,11 @@ main {
     height: 3vmin;
     width: 3vmin;
     position: absolute;
-    z-index: 3;
+    z-index: 2;
     border-radius: 50%;
     background-color: #ee00ff;
     border: 6px solid #00d9ff;
+    margin-left: 5px;
 }
 .hour-hand, .minute-hand , .second-hand{
     --rotate : 0;
@@ -77,8 +68,9 @@ main {
 }
 .hour-hand {
     height: 18vmin;
-    width: 1.5vmin;
+    width: 1.7vmin;
     background: linear-gradient(#00d9ff, #ee00ff);
+
 }
 .minute-hand {
     height: 20vmin;
